@@ -16,39 +16,46 @@
 </head>
 <body class="hold-transition login-page">
     <div class="login-box">
-        <div class="login-logo">
-            <a href="#"> <b>ECUAFacturas</b> </a>
-        </div><!--Fin logo-->
-        <div class="login-box-body">
-            <p class="login-box-msg">Ingrese sus credenciales de Acceso</p>
-            <form  method="post" id="frmAcceso">
-                <div class="form-group has-feedback">
-                    <input type="text" id="logina" name="logina" class="form-control" placeholder="Usuario">
-                    <span class="fa fa-user form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                    <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Contraseña">
-                    <span class="fa fa-key form-control-feedback"></span>
-                </div>
-                <div class="row">
-                    <div class="col-xs-8">
+      <div class="login-logo">
+        <a href="#"><b>ECUAFacturas</b></a>
+      </div><!-- /.login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg">Ingrese sus credenciales de Acceso</p>
+        <form method="post" id="frmAcceso">
+          <div class="form-group has-feedback">
+            <input type="text" id="logina" name="logina" class="form-control" placeholder="Usuario">
+            <span class="fa fa-user form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Password">
+            <span class="fa fa-key form-control-feedback"></span>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+              
+            </div><!-- /.col -->
+            <div class="col-xs-4">
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
+            </div><!-- /.col -->
+          </div>
+        </form>
 
-                    </div>
-                    <div class="col-xs-4">
-                        <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
-                    </div>
-                </div>
-            </form>
-            <a href="http://">Olvide mi contraseña</a>
-        </div>
-    </div>
+        
+        <a href="#">Olvidé mi password</a><br>
+        
 
-    <!--Jquery-->
+      </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+
+    <!-- jQuery -->
     <script src="../public/js/jquery-3.1.1.min.js"></script>
-    <!--Bootstrap 3.3.5-->
+    <!-- Bootstrap 3.3.5 -->
     <script src="../public/js/bootstrap.min.js"></script>
-    <!--Bootbox-->
+     <!-- Bootbox -->
     <script src="../public/js/bootbox.min.js"></script>
-    <script src=""></script>
-</body>
+
+    <script type="text/javascript" src="scripts/login.js"></script>
+
+
+  </body>
 </html>
