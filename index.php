@@ -46,7 +46,7 @@
         </div>
     </nav>
 
-    <section id="hero">
+    <section class="">
         <div class="row g-0 h-100">
             <div class="col-lg-6 d-flex">
                 <div class="content mx-auto align-self-center px-4 my-5">
@@ -58,8 +58,8 @@
                         100% digital.
                     </p>
                     <a href="#" class="btn btn-primary mb-5">Abre tu cuenta hoy</a>
-                    <div class="d-flex me-4">
-                        <div class="d-flex">
+                    <div class="d-flex">
+                        <div class="d-flex me-4">
                             <img src="img/what.png" class="me-3">
                             <div>
                                 <small>Contactate</small>
@@ -79,25 +79,75 @@
     </section>
     <!--secccion 2-->
     <section class="d-flex">
-        <div class="comtainer">
+        <div class="container align-self-center">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="content">
+                    <div class="content mx-auto px-4 my-5">
                         <img src="img/tax.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <h1 class="display-4 fw-bold">Haz que tu tiempo rinda<span class="text-primary">.</span></h1>
-                    <ul class="list-unstyled">
-                        <li class="d-flex mb-4">
-                            <p class="text-primary lead fw-bold step">01</p>
-                            <div class="ms-3">
-                                <p class="lead fw-bold">Crea tu cuenta<span class="text-primary">.</span></p><p>Es muy, sencillo solamente
-                                    ingresa tus datos.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="col-lg-6 d-flex">
+                    <div class="align-self-center my-5 px-4">
+                        <h1 class="display-4 fw-bold mb-5">Haz que tu tiempo rinda<span class="text-primary">.</span>
+                        </h1>
+                        <ul class="list-unstyled">
+                            <li class="d-flex mb-4">
+                                <p class="text-primary lead fw-bold step">01</p>
+                                <div class="ms-3">
+                                    <p class="lead fw-bold">Crea tu cuenta<span class="text-primary">.</span></p>
+                                    <p>Es muy, sencillo solamente
+                                        ingresa tus datos.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex mb-4">
+                                <p class="text-primary lead fw-bold step">02</p>
+                                <div class="ms-3">
+                                    <p class="lead fw-bold">Agrega las cuentas del sri<span
+                                            class="text-primary">.</span>
+                                    </p>
+                                    <p>Ancla los Ruc necesarios
+                                        a tu cuenta.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex mb-4">
+                                <p class="text-primary lead fw-bold">03</p>
+                                <div class="ms-3">
+                                    <p class="lead fw-bold">Activa tu cuenta<span class="text-primary">.</span></p>
+                                    <p>Puedes elegir el mejor plan
+                                        para tu empresa.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Seccion 3-->
+    <section class="d-flex py-6" >
+        <div class="container align-self-center">
+            <div class="call-to-action bg-light">
+                <div class="row">
+                    <div class="col-lg-7 d-flex">
+                        <div class="align-self-center p-5">
+                            <h2 class="diaplay-4 fw-bold mb-4">Consulta y recibe todos los documentos del SRI <span
+                                    class="text-primary">.</span></h2>
+                            <p class="lead mb-4">Tus documentos en una sola plataforma a todo momento, puedes consultar
+                                tus
+                                Facturas
+                                retenciones y otros desde cualquier dispositivo.
+                            </p>
+                            <a href="" class="btn btn-primary">Abre tu cuenta hoy</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 d-flex">
+                        <div class="align-self-center mx-auto p-5">
+                            <img src="img/tax2.jpg" class="img-fluid" alt="">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
