@@ -1,5 +1,6 @@
 :root{
-    --primary:#6209DB
+    --primary:#6209DB;
+    --dark:#000000;
 }
 body{
     font-family: 'Poppins', sans-serif ;
@@ -33,4 +34,31 @@ body{
 }
 .content{
     max-width: 500px;
+}
+#hero{
+    height: 900px;
+}
+
+.step{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.step::after{
+    content: '';
+    border-right: 1px solid var(--dark);
+    height: 60px;
+    position: absolute;
+    top: 34px;
+    opacity: .2;
+}
+
+@media (max-width: 992px){
+    .navbar{
+        position: relative !important;
+    }
+}
+.navbar-toggler:focus{
+    box-shadow: none;
 }
