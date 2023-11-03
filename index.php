@@ -35,7 +35,7 @@
                         <a class="nav-link align-self-center text-dark">Nosotros</a>
                     </li>
                     <li class="nav-item me-2 d-flex">
-                        <a class="nav-link align-self-center text-dark">Inicia Sesión</a>
+                        <a href="vistas/login.html" class="nav-link align-self-center text-dark">Inicia Sesión</a>
                     </li>
                     <li class="nav-item">
                         <a class="btn btn-primary">Abre tu cuenta aquí.</a>
@@ -127,7 +127,7 @@
         </div>
     </section>
     <!--Seccion 3-->
-    <section class="d-flex py-6" >
+    <section class="py-6" >
         <div class="container align-self-center">
             <div class="call-to-action bg-light">
                 <div class="row">
