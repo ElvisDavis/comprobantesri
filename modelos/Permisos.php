@@ -14,7 +14,7 @@ Class Permiso
 	//Implementar un método para listar los registros
 	public function listar()
 	{
-		$sql="SELECT * FROM permisos";
+		$sql="SELECT * FROM permisos WHERE idpermisos='2'";
 		return ejecutarConsulta($sql);		
 	}
 

@@ -83,7 +83,7 @@ switch ($_GET["accion"]) {
         break;
     case 'permisos':
         //Obtenemos todos los permisos de la tabla permisos
-        require_once "../modelos/Permiso.php";
+        require_once "../modelos/Permisos.php";
         $permiso = new Permiso();
         $rspta = $permiso->listar();
 
@@ -95,13 +95,13 @@ switch ($_GET["accion"]) {
 
         //Almacenar los permisos asignados al usuario en el array
         while ($per = $marcados->fetch_object()) {
-            array_push($valores, $per->idpermiso);
+            array_push($valores, $per->idpermisos);
         }
 
         //Mostramos la lista de permisos en la vista y si están o no marcados
         while ($reg = $rspta->fetch_object()) {
-            $sw = in_array($reg->idpermiso, $valores) ? 'checked' : '';
-            echo '<li> <input type="checkbox" ' . $sw . '  name="permiso[]" value="' . $reg->idpermiso . '">' . $reg->nombre . '</li>';
+            $sw = in_array($reg->idpermisos, $valores) ? 'checked' : '';
+            echo '<li> <input type="checkbox" checked="checked" ' . $sw . '  name="permiso[]" value="' . $reg->idpermisos . '">' . $reg->nombre . '</li>';
         }
         break;
     case 'verificar':
