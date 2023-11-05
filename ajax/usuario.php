@@ -12,28 +12,29 @@ $imagen = isset($_POST["imagen"]) ? limpiarCadena($_POST["imagen"]) : "";
 
 switch ($_GET["accion"]) {
     case 'guardaryeditar':
-        if (!file_exists($_FILES['imagen']['tmp_name']) || !is_uploaded_file($_FILES['imagen']['tmp_name'])) {
-            # code...
-            $imagen = $_POST["imagenactual"];
-        } else {
-            # code...
-            $ext = explode(".", $_FILES["imagen"]["name"]);
-            if ($_FILES['imagen']['type'] == "image/jpg" || $_FILES['image']['type'] == "image/jpeg" || $FILES['image']['type'] == "image/png") {
-                # code...
-                $imagen = round(microtime(true)) . '.' . end($ext);
-                move_uploaded_file($_FILES["imagen"]["tmp_name"], "../files/usuarios" . $imagen);
-            }
-        }
+        if (!file_exists($_FILES['imagen']['tmp_name']) || !is_uploaded_file($_FILES['imagen']['tmp_name']))
+		{
+			$imagen=$_POST["imagenactual"];
+		}
+		else
+		{
+			$ext = explode(".", $_FILES["imagen"]["name"]);
+			if ($_FILES['imagen']['type'] == "image/jpg" || $_FILES['imagen']['type'] == "image/jpeg" || $_FILES['imagen']['type'] == "image/png")
+			{
+				$imagen = round(microtime(true)) . '.' . end($ext);
+				move_uploaded_file($_FILES["imagen"]["tmp_name"], "../files/usuarios/" . $imagen);
+			}
+		}
         //Hash sha256 en la contraseña
         $clavehash = hash("SHA256", $clave);
         if (empty($idusuario)) {
             # code...
-            $rspta = $usuario->insertar($nombre, $telefono, $direccion, $email, $clavehash, $imagen, $_POST['permisos']);
+            $rspta = $usuario->insertar($nombre, $telefono, $direccion, $email, $clavehash, $imagen, $_POST['permiso']);
             echo $rspta ? "Usuario registrado con exito" : "El usuario no puedo ser registrado";
 
         } else {
             # code...
-            $rspta = $usuario->editar($idusuario, $nombre, $telefono, $direccion, $email, $clavehash, $imagen, $_POST['permisos']);
+            $rspta = $usuario->editar($idusuario, $nombre, $telefono, $direccion, $email, $clavehash, $imagen, $_POST['permiso']);
             echo $rspta ? "Usuario editado correctamente" : "El usuario no se pudo editar";
         }
         break;
