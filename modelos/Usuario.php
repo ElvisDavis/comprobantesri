@@ -10,10 +10,10 @@ Class Usuario
     }  
 
     //implementamos un método para insertar registros
-    public function insertar($nombre,$telefono,$email,$clave,$imagen,$permisos)
+    public function insertar($nombre,$telefono,$direccion,$email,$clave,$imagen,$permisos)
     {
-        $sql="INSERT INTO usuario(nombre,telefono,email,clave,imagen,condicion)
-        VALUES('$nombre','$telefono','$email','$clave','$imagen','1')";
+        $sql="INSERT INTO usuario(nombre,telefono,direccion,email,clave,imagen,condicion)
+        VALUES('$nombre','$telefono','$direccion','$email','$clave','$imagen','1')";
         //return ejecutarConsulta($sql);
         $idusuarionew=ejecutarConsulta_retornarID($sql);
         $num_elementos=0;
@@ -28,9 +28,9 @@ Class Usuario
     }
 
     //implementamos un método par editar registros
-    public function editar ($idusuario,$nombre,$telefono,$email,$clave,$imagen,$permisos)
+    public function editar ($idusuario,$nombre,$telefono,$direccion,$email,$clave,$imagen,$permisos)
     {
-        $sql= "UPDATE usuario SET nombre='$nombre', telefono='$telefono',email='$email',clave='$clave',imagen='$imagen' WHERE idusuario='$idusuario'";
+        $sql= "UPDATE usuario SET nombre='$nombre', telefono='$telefono',direccion='$direccion',email='$email',clave='$clave',imagen='$imagen' WHERE idusuario='$idusuario'";
         ejecutarConsulta($sql);
         //Eliminmos todos los permisos asignados para volverlos a registrar
         $sqldel="DELETE FROM permisousuario WHERE idusuario='$idusuario'";
@@ -39,7 +39,7 @@ Class Usuario
         $sw=true;
         while($num_elementos < count($permisos))
         {
-            $sql_detalle= "INSERT INTO permisousuari(idusuario,idpermisos)VALUES('$idusuario','$permisos[$num_elementos]')";
+            $sql_detalle= "INSERT INTO permisousuario(idusuario,idpermisos)VALUES('$idusuario','$permisos[$num_elementos]')";
             ejecutarConsulta($sql_detalle) or $sw = false;  
             $num_elementos=$num_elementos + 1;
         }
@@ -75,7 +75,7 @@ Class Usuario
     //implementamos una función para listar os permisos marcados 
     public function listarmarcados($idusuario)
     {
-        $sql="SELECT *FROM permisousuario WHERE idusuario='$idusuario'";
+        $sql="SELECT * FROM permisousuario WHERE idusuario='$idusuario'";
         return ejecutarConsulta($sql);
     }
 
