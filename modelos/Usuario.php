@@ -62,7 +62,7 @@ Class Usuario
     public function mostrar($idusuario)
     {
         $sql="SELECT * FROM usuario WHERE idusuario='$idusuario'";
-        return ejecutarConsulta($sql);
+        return ejecutarConsultaSimpleFila($sql);
     }
     //implementamos un método para listar los registros
     public function listar()

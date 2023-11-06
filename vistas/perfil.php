@@ -75,7 +75,7 @@ if (!isset($_SESSION["nombre"])) {
         <!--Fin-Contenido-->
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog" style="width: 65% !important;">
+            <div class="modal-dialog" style="width: 35% !important;">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -104,16 +104,16 @@ if (!isset($_SESSION["nombre"])) {
                                 <input type="password" class="form-control" name="clave" id="clave" maxlength="64"
                                     placeholder="Clave" required>
                             </div>
-
-
-
-
                         </form>
                     </div>
                     <div class="modal-footer">
+
                         <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i>
                             Registrarse</button>
+
+
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+
                     </div>
                 </div>
             </div>
