@@ -148,7 +148,7 @@ switch ($_GET["accion"]) {
         //Destruìmos la sesión
         session_destroy();
         //Redireccionamos al login
-        header("Location: ../index.php");
+        header("Location: ../index.html");
 
         break;
 

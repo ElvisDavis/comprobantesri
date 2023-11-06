@@ -82,7 +82,7 @@ Class Usuario
     //Funcion para verificar aaceso al sistema
     public function verificar($email, $clave)
     {
-        $sql="SELECT idusurio, nombre, email FROM usuario WHERE email='$email' AND clave='$clave'AND condicion='1'";
+        $sql="SELECT idusuario, nombre, email, imagen FROM usuario WHERE email='$email' AND clave='$clave'AND condicion='1'";
         return ejecutarConsulta($sql);
     }
 }
