@@ -25,42 +25,41 @@ if (!isset($_SESSION["nombre"])) {
               </div>
               <!-- /.box-header -->
               <!-- centro -->
-              <ul class="nav nav-tabs">
-                <li role="" class="active"><a href="#descargas" data-toggle="tab">Descargas</a></li>
-                <li role=""><a href="#gastos" data-toggle="tab">Gatos Personales</a></li>
-              </ul>
-              <div class="tab-content">
-                <!--Descargar-->
-                <div class="tab-pane active" id="descargas">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="col-md-4">
+              <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                  <li role="" class="active"><a href="#descargas" data-toggle="tab">Descargas</a></li>
+                  <li role=""><a href="#gastos" data-toggle="tab">Gatos Personales</a></li>
+                </ul>
+                <div class="tab-content">
+                  <!--Descargar-->
+                  <div class="tab-pane active" id="descargas">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="col-md-4">
                           <h1>Hola</h1>
-                      </div>
-                      <div class="col-md-4">
-                        <h2>hola</h2>
-                      </div>
-                      <div class="col-md-4">
-                        <h3>hola</h3>
+                        </div>
+                        <div class="col-md-4">
+                          <h2>hola</h2>
+                        </div>
+                        <div class="col-md-4">
+                          <h3>hola</h3>
+                        </div>
                       </div>
                     </div>
                   </div>
-
-
+                  <!---/. Desacrgas-->
+                  <!--Gastos Personales-->
+                  <div class="tab-pane" id="gastos">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <button class="btn btn-primary"><span class="fa fa-plus"></span>
+                          Agregar</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!--./Gastos Personales-->
                 </div>
-                <!---/. Desacrgas-->
-
-                <!--Gastos Personales-->
-                <div class="tab-pane" id="gastos">
-                  <h1>hola soy yo </h1>
-
-                </div>
-                <!--./Gastos Personales-->
-
-
-
               </div>
-
               <!--Fin centro -->
             </div><!-- /.box -->
           </div><!-- /.col -->

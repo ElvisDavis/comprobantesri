@@ -76,9 +76,12 @@ if (strlen(session_id()) < 1)
 
                 <!-- Menu Footer-->
                 <li class="user-footer">
+                <div class="pull-left">
+                    <a href="perfil.php" class="btn btn-default btn-flat"><i class="fa fa-user" aria-hidden="true"></i>Mi perfil</a>
+                  </div>
 
                   <div class="pull-right">
-                    <a href="../ajax/usuario.php?accion=salir" class="btn btn-default btn-flat">Cerrar</a>
+                    <a href="../ajax/usuario.php?accion=salir" class="btn btn-default btn-flat"><i class="fa fa-sign-out" aria-hidden="true"></i>Cerrar</a>
                   </div>
                 </li>
               </ul>
