@@ -26,18 +26,33 @@ if (!isset($_SESSION["nombre"])) {
               <!-- /.box-header -->
               <!-- centro -->
               <ul class="nav nav-tabs">
-                <li role="" class="active"><a href="#descrgas">Descargas</a></li>
-                <li role=""><a href="#gastos">Gatos Personales</a></li>
+                <li role="" class="active"><a href="#descargas" data-toggle="tab">Descargas</a></li>
+                <li role=""><a href="#gastos" data-toggle="tab">Gatos Personales</a></li>
               </ul>
-              <div class="tab-content" >
+              <div class="tab-content">
                 <!--Descargar-->
                 <div class="tab-pane active" id="descargas">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="col-md-4">
+                          <h1>Hola</h1>
+                      </div>
+                      <div class="col-md-4">
+                        <h2>hola</h2>
+                      </div>
+                      <div class="col-md-4">
+                        <h3>hola</h3>
+                      </div>
+                    </div>
+                  </div>
+
 
                 </div>
                 <!---/. Desacrgas-->
 
                 <!--Gastos Personales-->
                 <div class="tab-pane" id="gastos">
+                  <h1>hola soy yo </h1>
 
                 </div>
                 <!--./Gastos Personales-->
