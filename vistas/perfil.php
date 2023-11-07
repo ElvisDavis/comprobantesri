@@ -52,12 +52,32 @@ if (!isset($_SESSION["nombre"])) {
                                     <div class="tab-pane" id="cuentas">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="pull-right">
-                                                    <a data-toggle="modal" href="#myModal">
-                                                        <button class="btn btn-primary"><span class="fa fa-plus"></span>
-                                                            Agregar</button>
-                                                    </a>
+                                                <div class="box">
+                                                    <div class="box-header">
+                                                        <div class="pull-right">
+                                                            <a data-toggle="modal" href="#myModal">
+                                                                <button class="btn btn-primary"><span class="fa fa-plus"></span>
+                                                                    Agregar</button>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel-body table-responsive" id="listadoregistros">
+                                                        <table id="tbllistado"class="table table-striped table-bordered table-condensed table.hover">
+                                                            <thead>
+                                                                <th>N°</th>
+                                                                <th>Razón Social</th>
+                                                                <th>Dirección</th>
+                                                                <th>Teléfono</th>
+                                                                <th>Correo Electrónico</th>
+                                                                <th>RUC</th>
+                                                                <th>Clave SRI</th>
+                                                                <th>Estado</th>
+                                                                <th>Editar</th>
+                                                            </thead>
+                                                        </table>
+                                                    </div>
                                                 </div>
+
 
                                             </div>
                                         </div>
@@ -84,21 +104,32 @@ if (!isset($_SESSION["nombre"])) {
                     <div class="modal-body" id="formularioregistros">
                         <form name="formulario" id="formulario" method="POST">
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <label>Nombres(*):</label>
-                                <input type="hidden" name="idusuario" id="idusuario">
+                                <label>Razon Social(*):</label>
+                                <input type="hidden" name="idcontribuyente" id="idcontribuyente">
                                 <input type="text" class="form-control" name="nombre" id="nombre" maxlength="100"
                                     placeholder="Ingrese nombres completos" required>
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <label>Email(*):</label>
+                                <label>Dirección:</label>
+                                <input type="email" class="form-control" name="email" id="email" maxlength="50"
+                                    placeholder="Dirección">
+                            </div>
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <label>Celular:</label>
+                                <input type="text" class="form-control" name="telefono" id="telefono" maxlength="10"
+                                    placeholder="Teléfono">
+                            </div>
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <label>Email:</label>
                                 <input type="email" class="form-control" name="email" id="email" maxlength="50"
                                     placeholder="Email">
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <label>Celular:</label>
-                                <input type="text" class="form-control" name="telefono" id="telefono" maxlength="20"
-                                    placeholder="Teléfono">
+                                <label>RUC(*):</label>
+                                <input type="email" class="form-control" name="email" id="email" maxlength="13"
+                                    placeholder="RUC">
                             </div>
+
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <label>Clave (*):</label>
                                 <input type="password" class="form-control" name="clave" id="clave" maxlength="64"
@@ -127,7 +158,7 @@ if (!isset($_SESSION["nombre"])) {
     require 'footer.php';
     ?>
 
-    <script type="text/javascript" src="scripts/usuario.js"></script>
+    <script type="text/javascript" src="scripts/contribuyente.js"></script>
     <?php
 }
 ob_end_flush();

@@ -16,10 +16,10 @@ Class Contribuyente
         return ejecutarConsulta($sql);
     }
     //implementamos un método para editar el contribuyente
-    public function editar($idcontribuyente,$idusuario,$razonsocial,$direccion,$telefono,$email,$ruc)
+    public function editar($idcontribuyente,$idusuario,$razonsocial,$direccion,$telefono,$email,$ruc,$clave)
     {
-        $sql= "UPDATE contribuyente SET idusuario='$idusuario', razonsocial='$razonsocial', direccion='$direccion',telefono='$telefono', email='$email',ruc='$ruc'
-        WHERRE idcontribuyente='$idcontribuyente'";
+        $sql= "UPDATE contribuyente SET idusuario='$idusuario', razonsocial='$razonsocial', direccion='$direccion',telefono='$telefono', email='$email',ruc='$ruc',clave='$clave'
+        WHERE idcontribuyente='$idcontribuyente'";
         return ejecutarConsulta($sql);
     }
 
