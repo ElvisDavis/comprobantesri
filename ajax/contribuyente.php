@@ -45,19 +45,19 @@ switch ($_GET["accion"]) {
         $data = array();
         while ($reg = $rspta->fetch_object()) {
             $data[] = array(
-                "0" => ($reg->estado) ? '<button class="btn btn-warning" onclick="mostrar(' . $reg->idcontribuyente . ')"><i class="fa fa-pencil"></i></button>' .
-                    ' <button class="btn btn-danger" onclick="desactivar(' . $reg->idcontribuyente . ')"><i class="fa fa-close"></i></button>' :
-                    '<button class="btn btn-warning" onclick="mostrar(' . $reg->idcontribuyente . ')"><i class="fa fa-pencil"></i></button>' .
-                    ' <button class="btn btn-primary" onclick="activar(' . $reg->idcontribuyente . ')"><i class="fa fa-check"></i></button>',
-                "1" => $reg->iusuario,
-                "2" => $reg->razonsocial,
-                "3" => $reg->direccion,
-                "4" => $reg->telefono,
-                "5" => $reg->email,
-                "6" => $reg->ruc,
-                "7" => $reg->clave,
-                "8" => ($reg->condicion) ? '<span class="label bg-green">Activado</span>' :
-                    '<span class="label bg-red">Desactivado</span>'
+                "0" => $reg->idcontribuyente,
+
+                "1" => $reg->razonsocial,
+                "2" => $reg->direccion,
+                "3" => $reg->telefono,
+                "4" => $reg->email,
+                "5" => $reg->ruc,
+              
+                "6" => ($reg->estado) ? '<span class="label bg-green">Activado</span>' :
+                    '<span class="label bg-red">Desactivado</span>',
+                "7" => ($reg->estado) ? '<button class="btn btn-warning" onclick="mostrar(' . $reg->idcontribuyente . ')"><i class="fa fa-pencil"></i></button>' :
+
+                    '<button class="btn btn-warning" onclick="mostrar(' . $reg->idcontribuyente . ')"><i class="fa fa-pencil"></i></button>'
             );
         }
         $results = array(

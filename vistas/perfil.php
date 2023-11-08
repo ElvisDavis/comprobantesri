@@ -61,8 +61,8 @@ if (!isset($_SESSION["nombre"])) {
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="panel-body table-responsive" id="listadoregistros">
-                                                        <table id="tbllistado"class="table table-striped table-bordered table-condensed table.hover">
+                                                    <div class="table-responsive" id="listadoregistros">
+                                                        <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                                                             <thead>
                                                                 <th>N°</th>
                                                                 <th>Razón Social</th>
@@ -70,7 +70,7 @@ if (!isset($_SESSION["nombre"])) {
                                                                 <th>Teléfono</th>
                                                                 <th>Correo Electrónico</th>
                                                                 <th>RUC</th>
-                                                                <th>Clave SRI</th>
+
                                                                 <th>Estado</th>
                                                                 <th>Editar</th>
                                                             </thead>
@@ -111,7 +111,7 @@ if (!isset($_SESSION["nombre"])) {
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <label>Dirección:</label>
-                                <input type="email" class="form-control" name="email" id="email" maxlength="50"
+                                <input type="email" class="form-control" name="direccion" id="direccion" maxlength="50"
                                     placeholder="Dirección">
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -126,7 +126,7 @@ if (!isset($_SESSION["nombre"])) {
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <label>RUC(*):</label>
-                                <input type="email" class="form-control" name="email" id="email" maxlength="13"
+                                <input type="email" class="form-control" name="ruc" id="ruc" maxlength="13"
                                     placeholder="RUC">
                             </div>
 
