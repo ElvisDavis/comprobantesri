@@ -17,7 +17,7 @@ function limpiar() {
     $("#ruc").val("");
     $("#clave").val("");
 
-    $
+    
 }
 //implementamos una fucion para listar las cuentas asociadas
 function listar() {
@@ -45,6 +45,29 @@ function listar() {
             "iDisplayLength": 5,//Paginación
             "order": [[0, "desc"]]//Ordenar (columna,orden)
         }).DataTable();
+}
+function guardaryeditar(e)
+{
+	e.preventDefault(); //No se activará la acción predeterminada del evento
+	$("#btnGuardar").prop("disabled",true);
+	var formData = new FormData($("#formulario")[0]);
+
+	$.ajax({
+		url: "../ajax/contribuyente.php?accion=guardaryeditar",
+	    type: "POST",
+	    data: formData,
+	    contentType: false,
+	    processData: false,
+
+	    success: function(datos)
+	    {                    
+	          bootbox.alert(datos);	          
+	          //mostrarform(false);
+	          listar();
+	    }
+
+	});
+	limpiar();
 }
 
 init();

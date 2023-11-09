@@ -61,8 +61,9 @@ if (!isset($_SESSION["nombre"])) {
                                                             </a>
                                                         </div>
                                                     </div>
-                                                    <div class="table-responsive" id="listadoregistros">
-                                                        <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
+                                                    <div class="panel-body table-responsive" id="listadoregistros">
+                                                        <table id="tbllistado"
+                                                            class="table table-striped table-bordered table-condensed table-hover">
                                                             <thead>
                                                                 <th>N°</th>
                                                                 <th>Razón Social</th>
@@ -70,12 +71,13 @@ if (!isset($_SESSION["nombre"])) {
                                                                 <th>Teléfono</th>
                                                                 <th>Correo Electrónico</th>
                                                                 <th>RUC</th>
-
                                                                 <th>Estado</th>
                                                                 <th>Editar</th>
                                                             </thead>
                                                         </table>
                                                     </div>
+
+                                                   
                                                 </div>
 
 
@@ -101,7 +103,7 @@ if (!isset($_SESSION["nombre"])) {
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                         <h4 class="modal-title">Nueva Cuenta</h4>
                     </div>
-                    <div class="modal-body" id="formularioregistros">
+                    <div class="modal-body">
                         <form name="formulario" id="formulario" method="POST">
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <label>Razon Social(*):</label>
@@ -111,7 +113,7 @@ if (!isset($_SESSION["nombre"])) {
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <label>Dirección:</label>
-                                <input type="email" class="form-control" name="direccion" id="direccion" maxlength="50"
+                                <input type="texto" class="form-control" name="direccion" id="direccion" maxlength="50"
                                     placeholder="Dirección">
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -126,8 +128,7 @@ if (!isset($_SESSION["nombre"])) {
                             </div>
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <label>RUC(*):</label>
-                                <input type="email" class="form-control" name="ruc" id="ruc" maxlength="13"
-                                    placeholder="RUC">
+                                <input type="text" class="form-control" name="ruc" id="ruc" maxlength="13" placeholder="RUC">
                             </div>
 
                             <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -135,17 +136,13 @@ if (!isset($_SESSION["nombre"])) {
                                 <input type="password" class="form-control" name="clave" id="clave" maxlength="64"
                                     placeholder="Clave" required>
                             </div>
+                            <div>
+                                <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i>
+                                    Registrarse</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-
-                        <button class="btn btn-primary" type="submit" id="btnGuardar"><i class="fa fa-save"></i>
-                            Registrarse</button>
-
-
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-
-                    </div>
+                    </div>                   
                 </div>
             </div>
         </div>
